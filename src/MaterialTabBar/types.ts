@@ -79,6 +79,10 @@ export type MaterialTabBarProps<N extends TabName> = TabBarProps<N> & {
    * Color applied to the label when inactive
    */
   inactiveColor?: string
+  /**
+   * Padding to applied to the tab bar container.
+   */
+  paddingHorizontal?: number
 }
 
 export type ItemLayout = {

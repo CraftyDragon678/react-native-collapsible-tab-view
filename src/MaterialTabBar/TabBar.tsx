@@ -57,9 +57,10 @@ const MaterialTabBar = <T extends TabName = any>({
   inactiveColor,
   activeColor,
   tabStyle,
+  paddingHorizontal = 0,
 }: MaterialTabBarProps<T>): React.ReactElement => {
   const tabBarRef = useAnimatedRef<Animated.ScrollView>()
-  const windowWidth = useWindowDimensions().width
+  const windowWidth = useWindowDimensions().width - paddingHorizontal * 2
   const isFirstRender = React.useRef(true)
   const itemLayoutGathering = React.useRef(new Map<T, ItemLayout>())
 
